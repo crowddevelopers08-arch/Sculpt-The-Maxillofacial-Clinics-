@@ -229,8 +229,169 @@ const ThankYouPage = () => {
 
       {/* Decorative Elements */}
       <div className="absolute bottom-0 left-0 right-0 h-32 overflow-hidden pointer-events-none">
+        <div
+          className="w-full h-full"
+          style={{ backgroundColor: colors.white, opacity: 0.9 }}
+        ></div>
       </div>
-</div>
+
+      {/* Animation Styles */}
+      <style jsx>{`
+        @keyframes bounce-gentle {
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
+        }
+
+        .animate-bounce-gentle {
+          animation: bounce-gentle 2s ease-in-out infinite;
+        }
+
+        /* Floating Circles - Same as HeroSection */
+        .floating-circle {
+          position: absolute;
+          border-radius: 50%;
+          background: linear-gradient(
+            135deg,
+            rgba(188, 156, 36, 0.12) 0%,
+            rgba(188, 156, 36, 0.06) 100%
+          );
+          animation: float-around 12s ease-in-out infinite;
+        }
+
+        .circle-1 {
+          width: 100px;
+          height: 100px;
+          top: 10%;
+          left: 5%;
+          animation-delay: 0s;
+        }
+
+        .circle-2 {
+          width: 150px;
+          height: 150px;
+          top: 60%;
+          left: 10%;
+          animation-delay: 1.5s;
+        }
+
+        .circle-3 {
+          width: 80px;
+          height: 80px;
+          top: 30%;
+          right: 15%;
+          animation-delay: 3s;
+        }
+
+        .circle-4 {
+          width: 120px;
+          height: 120px;
+          bottom: 20%;
+          right: 10%;
+          animation-delay: 4.5s;
+        }
+
+        .circle-5 {
+          width: 90px;
+          height: 90px;
+          top: 70%;
+          right: 30%;
+          animation-delay: 6s;
+        }
+
+        @keyframes float-around {
+          0%,
+          100% {
+            transform: translate(0, 0) scale(1);
+          }
+          25% {
+            transform: translate(25px, -25px) scale(1.15);
+          }
+          50% {
+            transform: translate(-20px, 20px) scale(0.85);
+          }
+          75% {
+            transform: translate(20px, 25px) scale(1.1);
+          }
+        }
+
+        /* Gradient Orbs - Same as HeroSection */
+        .gradient-orb {
+          position: absolute;
+          border-radius: 50%;
+          filter: blur(60px);
+          opacity: 0.3;
+          animation: pulse-glow 6s ease-in-out infinite;
+        }
+
+        .orb-1 {
+          width: 300px;
+          height: 300px;
+          background: radial-gradient(
+            circle,
+            rgba(188, 156, 36, 0.4) 0%,
+            transparent 70%
+          );
+          top: -100px;
+          right: -100px;
+          animation-delay: 0s;
+        }
+
+        .orb-2 {
+          width: 250px;
+          height: 250px;
+          background: radial-gradient(
+            circle,
+            rgba(255, 184, 122, 0.3) 0%,
+            transparent 70%
+          );
+          bottom: -50px;
+          left: -50px;
+          animation-delay: 2s;
+        }
+
+        .orb-3 {
+          width: 200px;
+          height: 200px;
+          background: radial-gradient(
+            circle,
+            rgba(244, 232, 193, 0.5) 0%,
+            transparent 70%
+          );
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          animation-delay: 4s;
+        }
+
+        @keyframes pulse-glow {
+          0%,
+          100% {
+            opacity: 0.3;
+            transform: scale(1);
+          }
+          50% {
+            opacity: 0.5;
+            transform: scale(1.2);
+          }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+          .floating-circle {
+            display: none;
+          }
+
+          .gradient-orb {
+            filter: blur(40px);
+          }
+        }
+      `}</style>
+    </div>
   );
 };
 
