@@ -28,7 +28,6 @@ export default function ThankYouPage() {
             </div>
           </div>
 
-          {/* Thank You Message */}
           <div className="mb-12">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-[#d09a40] to-[#d09a40]/70 bg-clip-text text-transparent">
               Thank You!
