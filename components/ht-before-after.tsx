@@ -38,32 +38,32 @@ const BeforeAfterSlider = () => {
   const transformations: Transformation[] = [
     {
       id: 1,
-      beforeImage: "/before/IMG_1.png",
-      afterImage: "/before/IMGS_1.png",
+      beforeImage: "/hair1.jpg",
+      afterImage: "/hair2.jpg",
       name: " 1",
     },
     {
       id: 2,
-      beforeImage: "/before/IMG_2.png",
-      afterImage: "/before/IMGS_2.JPG",
+      beforeImage: "/hair5.jpg",
+      afterImage: "/hair6.jpg",
       name: " 2",
     },
     {
       id: 3,
-      beforeImage: "/before/IMG_3.JPEG",
-      afterImage: "/before/IMGS_3.png",
+      beforeImage: "/before/image1.jpg",
+      afterImage: "/before/image2.jpg",
       name: " 3",
     },
     {
       id: 4,
-      beforeImage: "/before/IMG_4.JPG",
-      afterImage: "/before/IMGS_4.png",
+      beforeImage: "/hair3.jpg",
+      afterImage: "/hair4.jpg",
       name: " 4",
     },
     {
       id: 5,
-      beforeImage: "/before/IMG_5.png",
-      afterImage: "/before/IMGS_5.png",
+      beforeImage: "/before/image3.jpg",
+      afterImage: "/before/image4.jpg",
       name: " 5",
     },
   ];
