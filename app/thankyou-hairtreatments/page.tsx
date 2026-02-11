@@ -18,22 +18,7 @@ export default function ThankYouPage() {
         {`
           gtag('event', 'conversion', {'send_to': 'AW-11327193954/WGxYCNmB96kbEOKGnZkq'});
         `}
-      </Script>
-      
-      {/* Submit lead form HT LP conversion tracking */}
-      <Script id="google-ads-conversion-submit-lead" strategy="afterInteractive">
-        {`
-          gtag('event', 'conversion', {'send_to': 'AW-11327193954/TzWMCLuE88IbEOKGnZkq'});
-        `}
-      </Script>
-      
-      {/* Lead LP Hair conversion tracking */}
-      <Script id="google-ads-conversion-lead-lp-hair" strategy="afterInteractive">
-        {`
-          gtag('event', 'conversion', {'send_to': 'AW-11327193954/rSpUCJnrpuAbEOKGnZkq'});
-        `}
-      </Script>
-      
+      </Script>    
       {/* Header */}
       <header className="border-b border-[#d09a40]/20 bg-black/95 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
