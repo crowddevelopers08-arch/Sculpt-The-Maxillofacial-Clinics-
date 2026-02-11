@@ -3,6 +3,7 @@ import Link from "next/link"
 import Script from "next/script"
 import { CheckCircle, Phone, Mail, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Thanknavskin from "@/components/thanknavskin"
 
 export const metadata: Metadata = {
   title: "Thank You - Sculpt The Maxillofacial Clinic",
@@ -13,35 +14,8 @@ export const metadata: Metadata = {
 export default function ThankYouPage() {
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Google Analytics Conversion Tag */}
-      <Script
-        id="google-analytics-conversion"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            gtag('event', 'conversion', {'send_to': 'AW-11327193954/rSpUCJnrpuAbEOKGnZkq'});
-          `
-        }}
-      />
-      
       {/* Header */}
-      <header className="border-b border-[#d09a40]/20 bg-black/95 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-           <div className="flex-shrink-0">
-             <img  className="w-[200px] h-[60px] max-[768px]:w-[150px] max-[768px]:h-[50px] max-[480px]:w-[120px] max-[480px]:h-[40px]" src="bglogo.png" alt="logo" />
-            </div>
-            <Link href="/skintreatment">
-              <Button
-                variant="outline"
-                className="border-[#d09a40] text-[#d09a40] hover:bg-[#d09a40] hover:text-black bg-transparent"
-              >
-                Back to Home
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </header>
+     <Thanknavskin />
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-16">
