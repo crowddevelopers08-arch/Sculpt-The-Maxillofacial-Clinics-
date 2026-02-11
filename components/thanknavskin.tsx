@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Thanknavskin() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="bg-black text-white">
       {/* Google Analytics Conversion Tag */}
       <Script
         id="google-analytics-conversion"
