@@ -3,6 +3,7 @@ import Link from "next/link"
 import Script from "next/script"
 import { CheckCircle, Phone, Mail, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Thanknavhairfen from "@/components/thanknavhairfen"
 
 export const metadata: Metadata = {
   title: "Thank You - Sculpt The Maxillofacial Clinic",
@@ -13,30 +14,7 @@ export const metadata: Metadata = {
 export default function ThankYouPage() {
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Google Ads Conversion Tracking - New Hair LP */}
-      <Script id="google-ads-conversion-new-hair-lp" strategy="afterInteractive">
-        {`
-          gtag('event', 'conversion', {'send_to': 'AW-11327193954/WGxYCNmB96kbEOKGnZkq'});
-        `}
-      </Script>    
-      {/* Header */}
-      <header className="border-b border-[#d09a40]/20 bg-black/95 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-           <div className="flex-shrink-0">
-             <img  className="w-[200px] h-[60px] max-[768px]:w-[150px] max-[768px]:h-[50px] max-[480px]:w-[120px] max-[480px]:h-[40px]" src="bglogo.png" alt="logo" />
-            </div>
-            <Link href="/hairtreatment">
-              <Button
-                variant="outline"
-                className="border-[#d09a40] text-[#d09a40] hover:bg-[#d09a40] hover:text-black bg-transparent"
-              >
-                Back to Home
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </header>
+<Thanknavhairfen />
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-16">

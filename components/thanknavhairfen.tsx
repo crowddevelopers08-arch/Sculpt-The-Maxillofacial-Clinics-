@@ -10,19 +10,15 @@ export const metadata: Metadata = {
     "Thank you for booking your consultation with Sculpt The Maxillofacial Clinic. We will contact you soon.",
 }
 
-export default function Thanknavskin() {
+export default function Thanknavhairfen() {
   return (
     <div className="bg-black text-white">
-      {/* Google Analytics Conversion Tag */}
-      <Script
-        id="google-analytics-conversion"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            gtag('event', 'conversion', {'send_to': 'AW-11327193954/rSpUCJnrpuAbEOKGnZkq'});
-          `
-        }}
-      />
+       {/* Google Ads Conversion Tracking - New Hair LP */}
+      <Script id="google-ads-conversion-new-hair-lp" strategy="afterInteractive">
+        {`
+          gtag('event', 'conversion', {'send_to': 'AW-11327193954/WGxYCNmB96kbEOKGnZkq'});
+        `}
+      </Script>    
       
       {/* Header */}
       <header className="border-b border-[#d09a40]/20 bg-black/95 backdrop-blur-sm sticky top-0 z-50">
