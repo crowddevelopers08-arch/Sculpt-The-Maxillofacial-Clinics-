@@ -13,19 +13,16 @@ export const metadata: Metadata = {
 export default function ThankYouPage() {
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Google Ads Conversion Tracking - New Skin LP */}
-      <Script id="google-ads-conversion-new-skin-lp" strategy="afterInteractive">
-        {`
-          gtag('event', 'conversion', {'send_to': 'AW-11327193954/WGxYCNmB96kbEOKGnZkq'});
-        `}
-      </Script>
-      
-      {/* Google Ads Conversion Tracking - Submit lead form Skin LP */}
-      <Script id="google-ads-conversion-submit-lead-skin-lp" strategy="afterInteractive">
-        {`
-          gtag('event', 'conversion', {'send_to': 'AW-11327193954/hBNnCLjo-sIbEOKGnZkq'});
-        `}
-      </Script>
+      {/* Google Analytics Conversion Tag */}
+      <Script
+        id="google-analytics-conversion"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            gtag('event', 'conversion', {'send_to': 'AW-11327193954/rSpUCJnrpuAbEOKGnZkq'});
+          `
+        }}
+      />
       
       {/* Header */}
       <header className="border-b border-[#d09a40]/20 bg-black/95 backdrop-blur-sm sticky top-0 z-50">
