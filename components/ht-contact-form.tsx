@@ -34,7 +34,6 @@ const ContactFormPopup = ({ isOpen, onClose } :any ) => {
     "Beard Transplant",
     "Eyebrow Transplant",
     "GFC Treatment",
-    "PRP Therapy",
     "General Consultation"
   ];
 

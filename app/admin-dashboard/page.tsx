@@ -422,7 +422,6 @@ export default function LeadsTable({
                 <SelectItem value="Beard Transplant" className="focus:bg-gray-100">Beard Transplant</SelectItem>
                 <SelectItem value="Eyebrow Transplant" className="focus:bg-gray-100">Eyebrow Transplant</SelectItem>
                 <SelectItem value="GFC Treatment" className="focus:bg-gray-100">GFC Treatment</SelectItem>
-                <SelectItem value="PRP Therapy" className="focus:bg-gray-100">PRP Therapy</SelectItem>
                 <SelectItem value="General Consultation" className="focus:bg-gray-100">General Consultation</SelectItem>
                 <SelectItem value="Skin Rejuvenation" className="focus:bg-gray-100">Skin Rejuvenation</SelectItem>
                 <SelectItem value="Facial Contouring" className="focus:bg-gray-100">Facial Contouring</SelectItem>
