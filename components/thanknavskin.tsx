@@ -13,14 +13,17 @@ export const metadata: Metadata = {
 export default function Thanknavskin() {
   return (
     <div className="bg-black text-white">
-      {/* Google Analytics Conversion Tag */}
+      
+      {/* Google Ads Conversion Tracking Script */}
       <Script
-        id="google-analytics-conversion"
+        id="google-ads-conversion-skin"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
-            gtag('event', 'conversion', {'send_to': 'AW-11327193954/rSpUCJnrpuAbEOKGnZkq'});
-          `
+            gtag('event', 'conversion', {
+              'send_to': 'AW-11327193954/hBNnCLjo-sIbEOKGnZkq'
+            });
+          `,
         }}
       />
       
@@ -29,7 +32,7 @@ export default function Thanknavskin() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
            <div className="flex-shrink-0">
-             <img  className="w-[200px] h-[60px] max-[768px]:w-[150px] max-[768px]:h-[50px] max-[480px]:w-[120px] max-[480px]:h-[40px]" src="bglogo.png" alt="logo" />
+             <img className="w-[200px] h-[60px] max-[768px]:w-[150px] max-[768px]:h-[50px] max-[480px]:w-[120px] max-[480px]:h-[40px]" src="bglogo.png" alt="logo" />
             </div>
             <Link href="/skintreatment">
               <Button
