@@ -50,8 +50,8 @@ const BeforeAfterSlider = () => {
     },
     {
       id: 3,
-      beforeImage: "/before/image1.jpg",
-      afterImage: "/before/image2.jpg",
+      beforeImage: "/treatment/image1.jpg",
+      afterImage: "/treatment/image2.jpg",
       name: " 3",
     },
     {
@@ -62,8 +62,8 @@ const BeforeAfterSlider = () => {
     },
     {
       id: 5,
-      beforeImage: "/before/image3.jpg",
-      afterImage: "/before/image4.jpg",
+      beforeImage: "/treatment/image3.jpg",
+      afterImage: "/treatment/image4.jpg",
       name: " 5",
     },
   ];
