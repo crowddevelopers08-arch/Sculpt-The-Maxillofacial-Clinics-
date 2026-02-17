@@ -37,7 +37,7 @@ export default function ThankYouPage() {
             </p>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
               Our team at Sculpt The Maxillofacial Clinic will review your request and contact you within 24 hours to
-              schedule your personalized skin consultations.
+              schedule your personalized skin consultation.
             </p>
           </div>
 
