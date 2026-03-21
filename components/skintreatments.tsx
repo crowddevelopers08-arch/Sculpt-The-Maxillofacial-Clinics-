@@ -223,7 +223,6 @@ export default function Skintreatment() {
 
       <section className="bg-black py-12 max-[470px]:py-6 px-4 sm:px-6 lg:px-8" style={{fontFamily: "'Outfit', sans-serif"}}>
         <div className="max-w-7xl mx-auto">
-          {/* Header */}
           <div className="text-center mb-10">
             <h2 className="section-title text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
               Tailored Solutions for Every Skin Concern
