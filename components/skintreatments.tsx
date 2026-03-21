@@ -23,23 +23,16 @@ export default function Skintreatment() {
     },
     {
       id: 3,
-      title: "Anti-Ageing & Skin Rejuvenation",
+      title: "Acne & Acne Scars",
       subtitle: "",
-      description: "Soften fine lines, restore lost volume, and improve skin texture with clinically advanced anti-ageing solutions, including subtle injectables that maintain natural expressions and deliver refreshed results.",
+      description: "Treat active acne and reduce visible scarring with proven solutions like chemical peels, microneedling, and laser treatments that improve skin clarity and texture over time.",
       image: "acneskin.jpeg"
     },
     {
       id: 4,
-      title: "Acne & Acne Scars",
+      title: "Anti-Ageing & Skin Rejuvenation",
       subtitle: "",
-      description: "Treat active acne and reduce visible scarring with proven solutions like chemical peels, microneedling, and laser treatments that improve skin clarity and texture over time.",
-      image: "acne.jpg"
-    },
-    {
-      id: 5,
-      title: "Loss of Firmness & Sagging Skin",
-      subtitle: "",
-      description: "Lift and firm sagging areas with collagen-boosting treatments that improve elasticity, redefine contours, and restore a more youthful appearance.",
+      description: "Soften fine lines, restore lost volume, and improve skin texture with clinically advanced anti-ageing solutions, including subtle injectables that maintain natural expressions and deliver refreshed results.",
       image: "before-afte.jpg"
     }
   ]
@@ -236,12 +229,12 @@ export default function Skintreatment() {
           <div className="cards-grid max-[470px]:mb-8 mb-16">
             {treatments.map((treatment, index) => (
               <div
-                key={index}
+                key={treatment.id}
                 className={`treatment-card rounded-2xl overflow-hidden cursor-pointer group card-container ${
-                  activeCard === index ? 'border-[#d49f17]' : ''
+                  activeCard === treatment.id ? 'border-[#d49f17]' : ''
                 } animate-fade-in-up`}
                 style={{ animationDelay: `${index * 0.1}s` }}
-                onMouseEnter={() => setActiveCard(index)}
+                onMouseEnter={() => setActiveCard(treatment.id)}
                 onMouseLeave={() => setActiveCard(null)}
               >
                 {/* Image Container with reduced height */}
