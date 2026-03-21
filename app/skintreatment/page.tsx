@@ -13,7 +13,7 @@ import WhyTrustSectionskin from '@/components/whyskin';
 // import { WhyChooseSection } from '@/components/TrustSectionhair';
 import React, { useState, useEffect } from 'react';
 
-export default function Hair() {
+export default function Skin() {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
