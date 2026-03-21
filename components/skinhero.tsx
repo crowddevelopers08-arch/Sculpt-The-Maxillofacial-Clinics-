@@ -51,7 +51,7 @@ const SkinheroSectionhair = () => {
             {/* Text Content */}
             <div className='text-center lg:text-left'>
                 <h1 className="text-3xl font-normal max-[470px]:pt-[10px] text-white sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl leading-tight">
-                   Consult Best Dermatologist in Bangalore -Dr. Priyanka Raj (MD Gold Medalist)
+                   Advanced Facial Aesthetics & Skin Treatments in Bangalore - Dr. Priyanka Raj (MD Gold Medalist)
                 </h1>
                 <p className="mt-4 text-base text-gray-400 sm:mt-5 sm:text-lg md:text-xl lg:mt-6 max-w-2xl mx-auto lg:mx-0">
                     Doctor-led skin treatment plans for pigmentation, acne scars & ageing—advanced care tailored for Indian skin.

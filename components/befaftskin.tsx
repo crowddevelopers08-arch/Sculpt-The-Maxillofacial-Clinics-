@@ -45,6 +45,12 @@ const BeforeAfterGalleryskin = ({
       after: "blu2.jpg",
       age: "29",
       procedure: "Eyebrow Restoration"
+    },
+     {
+      before: "before1.png",
+      after: "before2.png",
+      age: "29",
+      procedure: "Eyebrow Restoration"
     }
   ]
 }: BeforeAfterGalleryProps) => {

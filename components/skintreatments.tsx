@@ -9,31 +9,38 @@ export default function Skintreatment() {
   const treatments = [
     {
       id: 1,
-      title: "Melasma Treatment",
+      title: "Dark Spots & Pigmentation",
       subtitle: "",
-      description: "Clear stubborn pigmentation and uneven tone with advanced laser and peel therapies that are safe for all skin types and provide long-lasting results.",
+      description: "Fade stubborn marks, hyperpigmentation, and melasma with advanced solutions like chemical peels, Q-switch lasers, and targeted laser therapies that restore clear, even-toned skin.",
       image: "skinmilasma.jpeg"
     },
     {
-      id: 3,
-      title: "Carbon Laser Facial",
+      id: 2,
+      title: "Pigmentation & Uneven Skin Tone",
       subtitle: "",
-      description: "Brighten and refresh your skin in one session while clearing pores, evening tone, boosting collagen, and leaving a healthy glow.",
-      image: "laserskin.jpeg"
+      description: "Brighten dull, patchy skin and achieve a smoother complexion with deep-cleansing and laser-based treatments designed to balance tone and enhance natural glow.",
+      image: "Skinplus.jpg"
     },
     {
-      id: 4,
-      title: "Acne Scar Reduction",
+      id: 3,
+      title: "Anti-Ageing & Skin Rejuvenation",
       subtitle: "",
-      description: "Fade acne scars and improve skin texture using peels, microneedling, and laser therapies for smoother and healthier-looking skin.",
+      description: "Soften fine lines, restore lost volume, and improve skin texture with clinically advanced anti-ageing solutions, including subtle injectables that maintain natural expressions and deliver refreshed results.",
       image: "acneskin.jpeg"
     },
     {
-      id: 5,
-      title: "Skin Tightening & Collagen Boosting",
+      id: 4,
+      title: "Acne & Acne Scars",
       subtitle: "",
-      description: "Lift and firm sagging areas while boosting elasticity with non-surgical treatments that restore youthful contours and tone.",
-      image: "tight.jpg"
+      description: "Treat active acne and reduce visible scarring with proven solutions like chemical peels, microneedling, and laser treatments that improve skin clarity and texture over time.",
+      image: "acne.jpg"
+    },
+    {
+      id: 5,
+      title: "Loss of Firmness & Sagging Skin",
+      subtitle: "",
+      description: "Lift and firm sagging areas with collagen-boosting treatments that improve elasticity, redefine contours, and restore a more youthful appearance.",
+      image: "before-afte.jpg"
     }
   ]
 
@@ -179,72 +186,38 @@ export default function Skintreatment() {
           font-weight: 500;
         }
 
-        /* Responsive card sizing - Increased width and reduced height */
+        /* Card grid — flexbox so last row centers naturally */
+        .cards-grid {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 1.5rem;
+        }
+
+        /* Desktop: 3 per row → last 2 are auto-centred */
         .card-container {
-          max-width: 320px;
-          width: 100%;
-          flex: 1;
-          min-height: 420px;
+          flex: 0 0 calc(33.333% - 1rem);
+          min-height: 460px;
         }
 
-        @media (max-width: 1200px) {
-          .card-container {
-            max-width: 300px;
-          }
-        }
-
+        /* Tablet: 2 per row */
         @media (max-width: 1024px) {
           .card-container {
-            max-width: 280px;
-            min-height: 400px;
+            flex: 0 0 calc(50% - 0.75rem);
+            min-height: 420px;
           }
         }
 
-        @media (max-width: 768px) {
+        /* Mobile: 1 per row */
+        @media (max-width: 640px) {
           .card-container {
-            max-width: 100%;
-            min-width: 320px;
+            flex: 0 0 100%;
             min-height: 380px;
           }
         }
 
-        @media (max-width: 640px) {
-          .card-container {
-            min-width: 280px;
-            min-height: 360px;
-          }
-        }
-
-        @media (max-width: 480px) {
-          .card-container {
-            min-width: 100%;
-            min-height: 340px;
-          }
-        }
-
-        /* Reduced image height */
         .image-container {
-          height: 200px;
-        }
-
-        /* Grid layout for proper alignment */
-        .cards-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-          gap: 1.5rem;
-          align-items: stretch;
-        }
-
-        @media (min-width: 1024px) {
-          .cards-grid {
-            grid-template-columns: repeat(4, 1fr);
-          }
-        }
-
-        @media (max-width: 1024px) and (min-width: 768px) {
-          .cards-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
+          height: 220px;
         }
       `}</style>
 
@@ -264,12 +237,12 @@ export default function Skintreatment() {
           <div className="cards-grid max-[470px]:mb-8 mb-16">
             {treatments.map((treatment, index) => (
               <div
-                key={treatment.id}
+                key={index}
                 className={`treatment-card rounded-2xl overflow-hidden cursor-pointer group card-container ${
-                  activeCard === treatment.id ? 'border-[#d49f17]' : ''
+                  activeCard === index ? 'border-[#d49f17]' : ''
                 } animate-fade-in-up`}
                 style={{ animationDelay: `${index * 0.1}s` }}
-                onMouseEnter={() => setActiveCard(treatment.id)}
+                onMouseEnter={() => setActiveCard(index)}
                 onMouseLeave={() => setActiveCard(null)}
               >
                 {/* Image Container with reduced height */}
