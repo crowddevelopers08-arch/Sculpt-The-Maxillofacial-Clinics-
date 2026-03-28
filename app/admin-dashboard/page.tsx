@@ -183,6 +183,7 @@ export default function LeadsTable({
       'hairtreatment': { label: "Hair Treatment", color: "bg-purple-100 text-purple-800 border-purple-200" },
       'skintreatment': { label: "Skin Treatment", color: "bg-pink-100 text-pink-800 border-pink-200" },
       'hairtransplant': { label: "Hair Transplant", color: "bg-indigo-100 text-indigo-800 border-indigo-200" },
+      'surgery': { label: "Surgery", color: "bg-amber-100 text-amber-800 border-amber-200" },
       'skin and hair leads': { label: "Skin & Hair", color: "bg-teal-100 text-teal-800 border-teal-200" },
       'default': { label: formName, color: "bg-gray-100 text-gray-800 border-gray-200" }
     }
@@ -350,10 +351,11 @@ export default function LeadsTable({
                     <div className="flex items-center gap-2 mb-2">
                       <FileText className="h-4 w-4 text-blue-600" />
                       <span className="font-medium text-sm text-gray-900 capitalize">
-                        {formName === 'hairtreatment' ? 'Hair Treatment' : 
-                         formName === 'skintreatment' ? 'Skin Treatment' : 
-                         formName === 'hairtransplant' ? 'Hair Transplant' : 
-                         formName === 'skin and hair leads' ? 'Skin & Hair' : 
+                        {formName === 'hairtreatment' ? 'Hair Treatment' :
+                         formName === 'skintreatment' ? 'Skin Treatment' :
+                         formName === 'hairtransplant' ? 'Hair Transplant' :
+                         formName === 'surgery' ? 'Surgery' :
+                         formName === 'skin and hair leads' ? 'Skin & Hair' :
                          formName === 'Unknown' ? 'Unknown Form' : formName}
                       </span>
                     </div>
@@ -425,6 +427,10 @@ export default function LeadsTable({
                 <SelectItem value="General Consultation" className="focus:bg-gray-100">General Consultation</SelectItem>
                 <SelectItem value="Skin Rejuvenation" className="focus:bg-gray-100">Skin Rejuvenation</SelectItem>
                 <SelectItem value="Facial Contouring" className="focus:bg-gray-100">Facial Contouring</SelectItem>
+                <SelectItem value="Jawline Definition and Contouring" className="focus:bg-gray-100">Jawline Definition</SelectItem>
+                <SelectItem value="Chin Projection and Balance" className="focus:bg-gray-100">Chin Projection</SelectItem>
+                <SelectItem value="Nose Shape and Correction" className="focus:bg-gray-100">Nose Correction</SelectItem>
+                <SelectItem value="Eye Rejuvenation (Blepharoplasty)" className="focus:bg-gray-100">Eye Rejuvenation</SelectItem>
               </SelectContent>
             </Select>
 
@@ -694,10 +700,11 @@ export default function LeadsTable({
               Showing {filteredLeads.length} of {leads.length} leads
               {searchTerm && ` • Filtered by: "${searchTerm}"`}
               {formFilter !== 'all' && ` • Form: ${
-                formFilter === 'hairtreatment' ? 'Hair Treatment' : 
-                formFilter === 'skintreatment' ? 'Skin Treatment' : 
-                formFilter === 'hairtransplant' ? 'Hair Transplant' : 
-                formFilter === 'skin and hair leads' ? 'Skin & Hair' : 
+                formFilter === 'hairtreatment' ? 'Hair Treatment' :
+                formFilter === 'skintreatment' ? 'Skin Treatment' :
+                formFilter === 'hairtransplant' ? 'Hair Transplant' :
+                formFilter === 'surgery' ? 'Surgery' :
+                formFilter === 'skin and hair leads' ? 'Skin & Hair' :
                 formFilter === 'Unknown' ? 'Unknown Form' : formFilter
               }`}
             </div>

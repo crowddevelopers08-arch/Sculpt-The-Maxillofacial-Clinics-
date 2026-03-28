@@ -69,6 +69,8 @@ async function saveToDatabase(leadData: LeadData) {
       defaultSource = 'https://www.sculpttmfc.com/skintreatment';
     } else if (formName === 'hairtransplant') {
       defaultSource = 'https://www.sculpttmfc.com/hair-transplant';
+    } else if (formName === 'surgery') {
+      defaultSource = 'https://www.sculpttmfc.com/surgery';
     }
 
     const lead = await prisma.lead.create({
@@ -144,6 +146,9 @@ async function sendToTeleCRM(leadData: LeadData) {
     } else if (formName === 'hairtransplant') {
       defaultSource = 'https://www.sculpttmfc.com/hair-transplant';
       defaultPageName = 'https://www.sculpttmfc.com/hair-transplant';
+    } else if (formName === 'surgery') {
+      defaultSource = 'https://www.sculpttmfc.com/surgery';
+      defaultPageName = 'https://www.sculpttmfc.com/surgery';
     }
 
     // Use provided source or set default based on form type
@@ -487,6 +492,8 @@ export async function POST(request: Request) {
           defaultSource = 'https://www.sculpttmfc.com/skintreatment';
         } else if (formName === 'hairtransplant') {
           defaultSource = 'https://www.sculpttmfc.com/hair-transplant';
+        } else if (formName === 'surgery') {
+          defaultSource = 'https://www.sculpttmfc.com/surgery';
         }
 
         const errorLead = await prisma.lead.create({
