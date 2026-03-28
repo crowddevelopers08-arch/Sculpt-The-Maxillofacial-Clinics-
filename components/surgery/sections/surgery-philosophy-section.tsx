@@ -9,7 +9,7 @@ export function SurgeryPhilosophySection() {
           <div className="aura-card" />
           <div className="glass-frame">
             <Image
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB62LYjQpe7kYUrIt0rPX0GrAKQ3UxeFwM_nbQjq0FgZVbRIOvuapWFCv2HYNparfYstT48T-O0L_-N0R8t7rrC-U8s7c7psb5z2LdDD4SRnpEGI409MJIx9PJ9usgYPbPTQ0Lab_9zP_DQeHASQAGPCjMu6_x9blBOlrMK1VvdqFu95v0rDuhN9wCTUCXR2BJUlmyeXQgMbISXKsAEfq2oWUrH6eyBc0b2wA2IB379xVl4S9VdeLTXaSvhpZj-gPTOosZFikcNqdA"
+              src="/sur.png"
               alt="Facial balance concept"
               width={700}
               height={900}
