@@ -2039,6 +2039,98 @@ body {
   text-underline-offset: 2px;
 }
 
+/* ── Surgery Testimonials Section ── */
+
+.atelier-page .testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.atelier-page .testimonial-video-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.atelier-page .testimonial-iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.atelier-page .testimonials-nav { display: none; }
+
+@media (max-width: 768px) {
+  .atelier-page .testimonials-grid {
+    grid-template-columns: repeat(3, 100%);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 0;
+    margin-top: 2rem;
+    padding-bottom: .75rem;
+    scrollbar-width: none;
+  }
+  .atelier-page .testimonials-grid::-webkit-scrollbar { display: none; }
+  .atelier-page .testimonial-video-wrap {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+
+  .atelier-page .testimonials-carousel {
+    position: relative;
+  }
+
+  .atelier-page .testimonials-nav {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+    padding: 0 .5rem;
+    z-index: 2;
+  }
+
+  .atelier-page .testimonials-nav-btn {
+    pointer-events: all;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.2);
+    background: rgba(10,10,10,.6);
+    backdrop-filter: blur(6px);
+    color: var(--text);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background .2s, border-color .2s;
+  }
+  .atelier-page .testimonials-nav-btn:disabled {
+    opacity: .25;
+    cursor: default;
+  }
+  .atelier-page .testimonials-nav-btn:not(:disabled):active {
+    background: rgba(242,202,80,.18);
+    border-color: rgba(242,202,80,.5);
+  }
+
+}
+
 /* ── Surgery Standalone Pages ── */
 .standalone-page {
   position: relative;
@@ -2420,6 +2512,7 @@ body {
   .atelier-page .badge-card { position: relative; right: auto; bottom: auto; margin-top: 1.25rem; max-width: 100%; }
   .atelier-page .expertise-panel { grid-template-columns: 1fr; }
   .atelier-page .expertise-portrait { min-height: 34rem; }
+  .atelier-page .center-heading { margin-bottom: 1.25rem; }
   .atelier-page .section-header { flex-direction: column; align-items: flex-start; gap: 1.25rem; margin-bottom: 2.5rem; }
   .atelier-page .section-header .btn-outline { align-self: stretch; justify-content: center; }
   .atelier-page .procedures-grid,

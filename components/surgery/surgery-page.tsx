@@ -8,6 +8,7 @@ import { SurgerySurgicalApproachSection } from "./sections/surgery-surgical-appr
 import { SurgeryExpertiseSection } from "./sections/surgery-expertise-section";
 import { SurgeryProcessSection } from "./sections/surgery-process-section";
 import { SurgeryResultsSection } from "./sections/surgery-results-section";
+import { SurgeryTestimonialsSection } from "./sections/surgery-testimonials-section";
 import { SurgeryTrustSection } from "./sections/surgery-trust-section";
 import { SurgeryFaqSection } from "./sections/surgery-faq-section";
 import { SurgeryCtaSection } from "./sections/surgery-cta-section";
@@ -68,12 +69,13 @@ export function SurgeryPage() {
     <main className="atelier-page">
       <SurgeryTopNav />
       <SurgeryHeroSection />
+      <SurgeryResultsSection />
       <SurgeryPhilosophySection />
       <SurgeryProceduresSection />
       <SurgerySurgicalApproachSection />
       <SurgeryExpertiseSection />
       <SurgeryProcessSection />
-      <SurgeryResultsSection />
+      <SurgeryTestimonialsSection />
       <SurgeryTrustSection />
       <SurgeryFaqSection />
       <SurgeryCtaSection />
