@@ -250,9 +250,9 @@
   --color-button-text: #FFFFFF;
   
   /* Your custom colors */
-  --color-primary: #bc9c24;
-  --color-primary-dark: #8b6c0d;
-  --color-primary-light: #f4e8c1;
+  --color-primary: #c99500;
+  --color-primary-dark: #c99500;
+  --color-primary-light: #c99500;
   
   /* Font Size Variables */
   --text-xs: 0.75rem;    /* 12px */
@@ -2611,3 +2611,20 @@ body {
   .atelier-page .cta-panel h2 { font-size: clamp(1.6rem, 9vw, 2.2rem); }
   .atelier-page .cycling-image-wrap { height: clamp(16rem, 80vw, 22rem); }
 }
+
+/* Anti-aging component palette */
+:root {
+  --aa-primary: var(--color-primary, #c99500);
+  --aa-primary-dark: var(--color-primary-dark, #c99500);
+  --aa-accent: #c99500;
+  --aa-accent-soft: #c99500;
+  --aa-heading: var(--color-heading, #1F1F1F);
+  --aa-heading-soft: var(--color-subheading, #3A3A3A);
+  --aa-body: var(--color-body, #333333);
+  --aa-muted: #6b7280;
+  --aa-surface: #ffffff;
+  --aa-surface-soft: #f8f7f2;
+  --aa-surface-tint: #f4eee0;
+  --aa-border: #e5d8b5;
+}
+
