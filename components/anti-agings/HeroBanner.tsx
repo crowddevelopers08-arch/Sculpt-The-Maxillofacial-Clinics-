@@ -61,7 +61,7 @@ export default function HeroBanner() {
             <span className="font-semibold" style={{ color: "var(--aa-heading, #1F1F1F)" }}>
               your skin, your face, your natural beauty
             </span>{" "}
-            — supervised every step by a certified dermatologist.
+            — supervised every step by a certified Maxillofacial.
           </p>
 
           {/* Stats row */}
@@ -71,9 +71,9 @@ export default function HeroBanner() {
           >
             {[
               { val: "4.9★", label: "Google" },
-              { val: "10+", label: "Yrs Exp" },
+              { val: "13+", label: "Yrs Exp" },
               { val: "1000+", label: "Patients" },
-              { val: "100%", label: "Dermat-Led" },
+              { val: "100%", label: "Maxillofacial-Surgeon" },
             ].map((s, i) => (
               <div
                 key={s.label}
@@ -195,7 +195,7 @@ export default function HeroBanner() {
                 className="w-1.5 h-1.5 rounded-full animate-pulse"
                 style={{ backgroundColor: "var(--aa-primary, #c99500)" }}
               />
-              Dermat Supervised
+              Maxillofacial Surgeon
             </div>
 
             {/* Floating: bottom card */}

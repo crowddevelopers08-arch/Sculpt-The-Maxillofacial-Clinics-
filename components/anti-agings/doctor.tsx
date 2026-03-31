@@ -92,7 +92,7 @@ export default function MedicalAboutSection() {
               </svg>
             </div>
             <p className="font-bold text-gray-900 leading-tight" style={{ fontSize: "clamp(10px, 2.8vw, 18px)" }}>
-              12+ Years Of<br />Experience
+              13+ Years Of<br />Experience
             </p>
           </div>
         </div>
