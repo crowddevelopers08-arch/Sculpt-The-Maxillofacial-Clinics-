@@ -155,11 +155,12 @@ export default function BookAppointment() {
                   className="w-full outline-none"
                   style={{
                     border: "1.5px solid #cbd5e1",
-                    borderRadius: 50,
-                    padding: "14px 22px",
+                    borderRadius: 14,
+                    padding: "14px 16px",
                     fontSize: "0.95rem",
                     color: "#111827",
                     background: "#fff",
+                    boxShadow: "0 6px 18px rgba(15,23,42,0.04)",
                   }}
                 />
               </div>
@@ -176,11 +177,12 @@ export default function BookAppointment() {
                   className="w-full outline-none"
                   style={{
                     border: "1.5px solid #cbd5e1",
-                    borderRadius: 50,
-                    padding: "14px 22px",
+                    borderRadius: 14,
+                    padding: "14px 16px",
                     fontSize: "0.95rem",
                     color: "#111827",
                     background: "#fff",
+                    boxShadow: "0 6px 18px rgba(15,23,42,0.04)",
                   }}
                 />
               </div>
@@ -201,11 +203,12 @@ export default function BookAppointment() {
                   className="w-full outline-none"
                   style={{
                     border: "1.5px solid #cbd5e1",
-                    borderRadius: 50,
-                    padding: "14px 22px",
+                    borderRadius: 14,
+                    padding: "14px 16px",
                     fontSize: "0.95rem",
                     color: "#111827",
                     background: "#fff",
+                    boxShadow: "0 6px 18px rgba(15,23,42,0.04)",
                   }}
                 />
               </div>
@@ -221,12 +224,13 @@ export default function BookAppointment() {
                     required
                     style={{
                       border: "1.5px solid #cbd5e1",
-                      borderRadius: 50,
-                      padding: "14px 44px 14px 22px",
+                      borderRadius: 14,
+                      padding: "14px 40px 14px 16px",
                       fontSize: "0.95rem",
                       color: concern ? "#374151" : "var(--aa-muted, #6b7280)",
                       background: "#fff",
                       cursor: "pointer",
+                      boxShadow: "0 6px 18px rgba(15,23,42,0.04)",
                     }}
                   >
                     <option value="" disabled>
@@ -270,11 +274,12 @@ export default function BookAppointment() {
                 className="w-full outline-none resize-none"
                 style={{
                   border: "1.5px solid #cbd5e1",
-                  borderRadius: 20,
-                  padding: "14px 22px",
+                  borderRadius: 16,
+                  padding: "14px 16px",
                   fontSize: "0.95rem",
                   color: "#111827",
                   background: "#fff",
+                  boxShadow: "0 6px 18px rgba(15,23,42,0.04)",
                 }}
               />
             </div>
@@ -341,8 +346,8 @@ export default function BookAppointment() {
             }}
           >
             <img
-              src="/female-doctor.avif"
-              alt="Doctor"
+              src="/before-afte.jpg"
+              alt="Anti-aging before and after result"
               style={{
                 width: "100%",
                 height: "100%",
