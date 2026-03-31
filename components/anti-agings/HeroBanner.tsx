@@ -24,7 +24,7 @@ export default function HeroBanner() {
               className="text-xs font-bold tracking-[0.18em] uppercase"
               style={{ color: "var(--aa-primary, #c99500)" }}
             >
-              Dermatologist-Led · Bangalore
+              Maxillofacial-Surgeon · Bangalore
             </span>
           </div>
 
