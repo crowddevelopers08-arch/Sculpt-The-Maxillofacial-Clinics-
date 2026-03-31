@@ -30,7 +30,7 @@ export default function Navbar() {
 
       {/* ── RIGHT: Phone button ── */}
       <button
-        onClick={() => window.location.href = "tel:+919876543210"}
+        onClick={() => window.location.href = "tel:+91 9606601166"}
         className="flex items-center gap-2 font-semibold"
         style={{
           background: "linear-gradient(90deg, var(--aa-primary, #c99500) 0%, var(--aa-primary-dark, #c99500) 100%)",
@@ -79,7 +79,7 @@ export default function Navbar() {
             />
           </svg>
         </div>
-        <span className="hidden sm:inline">+91 98765 43210</span>
+        <span className="hidden sm:inline">+91 9606601166</span>
       </button>
     </nav>
   );

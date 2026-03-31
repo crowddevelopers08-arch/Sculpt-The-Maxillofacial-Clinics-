@@ -19,7 +19,7 @@ export default function Footer() {
           {/* Brand column */}
           <div className="md:col-span-1">
             <div className="mb-4">
-              <a href="/" className="flex items-center gap-2" style={{ textDecoration: "none" }}>
+              <a href="/anti-aging" className="flex items-center gap-2" style={{ textDecoration: "none" }}>
                 {/* Logo image */}
                 <img
                   src="/logo.png"
@@ -202,7 +202,7 @@ export default function Footer() {
             {["Privacy Policy"].map((item) => (
               <a
                 key={item}
-                href="/privacy-policy-aging"
+                href="/anti-aging/privacy-policy-aging"
                 className="text-md"
                 style={{ color: "#6b7280", textDecoration: "none" }}
               >

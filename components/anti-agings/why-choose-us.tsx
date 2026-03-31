@@ -109,7 +109,7 @@ export default function Departments() {
             aria-label="Previous"
           >
             <svg viewBox="0 0 24 24" fill="none" width="20" height="20">
-              <path d="M15 18l-6-6 6-6" stroke="var(--aa-primary, #c99500)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M15 18l-6-6 6-6" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </button>
 
@@ -120,7 +120,7 @@ export default function Departments() {
             aria-label="Next"
           >
             <svg viewBox="0 0 24 24" fill="none" width="20" height="20">
-              <path d="M9 18l6-6-6-6" stroke="var(--aa-primary, #c99500)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M9 18l6-6-6-6" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </button>
         </div>
@@ -248,7 +248,6 @@ export default function Departments() {
     </section>
   );
 }
-
 
 
 

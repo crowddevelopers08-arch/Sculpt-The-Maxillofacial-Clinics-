@@ -209,7 +209,7 @@ export default function ThankYou() {
             }}
           >
             <a
-              href="/"
+              href="/anti-aging"
               style={{
                 background: "linear-gradient(135deg, #1F1F1F 0%, var(--aa-primary-dark, #c99500) 50%, var(--aa-accent, #c99500) 100%)",
                 color: "white",

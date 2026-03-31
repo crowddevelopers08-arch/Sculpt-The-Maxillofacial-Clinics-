@@ -131,7 +131,7 @@ export default function MedicalAboutSection() {
 
           {/* CTA Button */}
           <div className="mt-2">
-            <button
+            <button onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
               className="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-white text-base transition-all duration-200 hover:opacity-90 hover:shadow-md"
               style={{ background: "linear-gradient(90deg, var(--aa-primary, #c99500) 0%, var(--aa-primary-dark, #c99500) 100%)" }}
             >

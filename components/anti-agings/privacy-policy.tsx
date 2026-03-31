@@ -220,7 +220,7 @@ export default function PrivacyPolicy() {
         {/* ── Back to Home button ── */}
         <div className="mb-8">
           <a
-            href="/"
+            href="/anti-aging"
             className="inline-flex items-center gap-2 font-semibold text-sm px-5 py-2.5 rounded-xl"
             style={{
               background: "#ffffff",
@@ -313,8 +313,8 @@ export default function PrivacyPolicy() {
             </p>
             <p className="text-sm leading-relaxed" style={{ color: "var(--aa-body, #333333)" }}>
               Contact us at{" "}
-              <a href="mailto:hello@sculpt.in" style={{ color: "var(--aa-primary, #c99500)", fontWeight: 600 }}>
-                hello@sculpt.in
+              <a href="mailto:sculptmaxillo.clinic@gmail.com" style={{ color: "var(--aa-primary, #c99500)", fontWeight: 600 }}>
+                sculptmaxillo.clinic@gmail.com
               </a>{" "}
               or visit us at our Bangalore clinic.
             </p>
@@ -338,7 +338,7 @@ export default function PrivacyPolicy() {
         {/* ── Back to Home button — bottom ── */}
         <div className="mt-8 flex justify-center">
           <a
-            href="/"
+            href="/anti-aging"
             className="inline-flex items-center gap-2 font-semibold text-sm px-5 py-2.5 rounded-xl"
             style={{
               background: "#ffffff",
