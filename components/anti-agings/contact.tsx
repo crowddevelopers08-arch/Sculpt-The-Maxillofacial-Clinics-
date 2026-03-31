@@ -3,8 +3,7 @@
 import { useState } from "react";
 
 export default function BookAppointment() {
-  const [reason, setReason] = useState("New Patient Visit");
-  const [department, setDepartment] = useState("Obstetrics and Gynecology");
+  const [concern, setConcern] = useState("");
 
   return (
     <section
@@ -30,7 +29,7 @@ export default function BookAppointment() {
             <div style={{ width: 10, height: 10, borderRadius: "50%", background: "var(--aa-primary, #c99500)", opacity: 0.5 }} />
           </div>
 
-          {/* Row 1: Name + Phone */}
+          {/* Row 1: Name + Email */}
           <div className="flex flex-col sm:flex-row max-sm:gap-2 gap-5 max-sm:mb-2 mb-6">
             <div className="flex flex-col flex-1">
               <label className="text-sm font-medium mb-2" style={{ color: "#374151" }}>Name</label>
@@ -49,6 +48,26 @@ export default function BookAppointment() {
               />
             </div>
             <div className="flex flex-col flex-1">
+              <label className="text-sm font-medium mb-2" style={{ color: "#374151" }}>Email</label>
+              <input
+                type="email"
+                placeholder="example@email.com"
+                className="w-full outline-none"
+                style={{
+                  border: "1.5px solid #cbd5e1",
+                  borderRadius: 50,
+                  padding: "14px 22px",
+                  fontSize: "0.95rem",
+                  color: "var(--aa-muted, #6b7280)",
+                  background: "#fff",
+                }}
+              />
+            </div>
+          </div>
+
+          {/* Row 2: Phone Number + Concern */}
+          <div className="flex flex-col sm:flex-row max-sm:gap-2 gap-5 max-sm:mb-2 mb-6">
+            <div className="flex flex-col flex-1">
               <label className="text-sm font-medium mb-2" style={{ color: "#374151" }}>Phone Number</label>
               <input
                 type="text"
@@ -64,18 +83,53 @@ export default function BookAppointment() {
                 }}
               />
             </div>
+            <div className="flex flex-col flex-1">
+              <label className="text-sm font-medium mb-2" style={{ color: "#374151" }}>Concern</label>
+              <div className="relative">
+                <select
+                  value={concern}
+                  onChange={(e) => setConcern(e.target.value)}
+                  className="w-full outline-none appearance-none"
+                  style={{
+                    border: "1.5px solid #cbd5e1",
+                    borderRadius: 50,
+                    padding: "14px 44px 14px 22px",
+                    fontSize: "0.95rem",
+                    color: concern ? "#374151" : "var(--aa-muted, #6b7280)",
+                    background: "#fff",
+                    cursor: "pointer",
+                  }}
+                >
+                  <option value="" disabled>Select your concern</option>
+                  <option value="Anti-Aging Treatment">Anti-Aging Treatment</option>
+                  <option value="Skin Rejuvenation">Skin Rejuvenation</option>
+                  <option value="Facial Contouring">Facial Contouring</option>
+                  <option value="Wrinkle Reduction">Wrinkle Reduction</option>
+                  <option value="Other">Other</option>
+                </select>
+                <svg
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  width="16"
+                  height="16"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"
+                >
+                  <path d="M5 7.5l5 5 5-5" stroke="var(--aa-primary, #c99500)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+            </div>
           </div>
 
-          {/* Row 2: Medical Record Number (full width) */}
+          {/* Row 4: Description (full width) */}
           <div className="flex flex-col max-sm:mb-2 mb-6">
-            <label className="text-sm font-medium mb-2" style={{ color: "#374151" }}>Medical Record Number</label>
-            <input
-              type="text"
-              placeholder="123456–7890–0987"
-              className="w-full outline-none"
+            <label className="text-sm font-medium mb-2" style={{ color: "#374151" }}>Description</label>
+            <textarea
+              placeholder="Briefly describe your concern or any additional details..."
+              rows={4}
+              className="w-full outline-none resize-none"
               style={{
                 border: "1.5px solid #cbd5e1",
-                borderRadius: 50,
+                borderRadius: 20,
                 padding: "14px 22px",
                 fontSize: "0.95rem",
                 color: "var(--aa-muted, #6b7280)",
@@ -84,75 +138,6 @@ export default function BookAppointment() {
             />
           </div>
 
-          {/* Row 3: Preferred Date + Preferred Time */}
-          <div className="flex flex-col sm:flex-row gap-5 max-sm:gap-2 max-sm:mb-2 mb-6">
-            <div className="flex flex-col flex-1">
-              <label className="text-sm font-medium mb-2" style={{ color: "#374151" }}>Preferred Date</label>
-              <div
-                className="flex items-center gap-3"
-                style={{
-                  border: "1.5px solid #cbd5e1",
-                  borderRadius: 50,
-                  padding: "14px 22px",
-                }}
-              >
-                {/* Calendar icon */}
-                <svg viewBox="0 0 20 20" fill="none" width="18" height="18">
-                  <rect x="2" y="4" width="16" height="14" rx="2" stroke="var(--aa-primary, #c99500)" strokeWidth="1.5"/>
-                  <path d="M6 2v4M14 2v4M2 8h16" stroke="var(--aa-primary, #c99500)" strokeWidth="1.5" strokeLinecap="round"/>
-                </svg>
-                <span style={{ color: "var(--aa-muted, #6b7280)", fontSize: "0.95rem" }}>August 24, 2023</span>
-              </div>
-            </div>
-            <div className="flex flex-col flex-1">
-              <label className="text-sm font-medium mb-2" style={{ color: "#374151" }}>Preferred Time</label>
-              <div
-                className="flex items-center gap-3"
-                style={{
-                  border: "1.5px solid #cbd5e1",
-                  borderRadius: 50,
-                  padding: "14px 22px",
-                }}
-              >
-                {/* Clock icon */}
-                <svg viewBox="0 0 20 20" fill="none" width="18" height="18">
-                  <circle cx="10" cy="10" r="8" stroke="var(--aa-primary, #c99500)" strokeWidth="1.5"/>
-                  <path d="M10 6v4l3 2" stroke="var(--aa-primary, #c99500)" strokeWidth="1.5" strokeLinecap="round"/>
-                </svg>
-                <span style={{ color: "var(--aa-muted, #6b7280)", fontSize: "0.95rem" }}>10:00AM</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Reason for Visit */}
-          <div className="flex flex-col mb-5">
-            <label className="text-sm font-medium mb-2" style={{ color: "#374151" }}>Reason for Visit</label>
-            <div className="flex flex-wrap items-center gap-4 lg:gap-6">
-              {["Routine Checkup", "New Patient Visit", "Specific Concern"].map((r) => (
-                <label key={r} className="flex items-center gap-2 cursor-pointer" style={{ fontSize: "0.9rem", color: "#374151" }}>
-                  <div
-                    onClick={() => setReason(r)}
-                    style={{
-                      width: 18,
-                      height: 18,
-                      borderRadius: "50%",
-                      border: `2px solid ${reason === r ? "var(--aa-primary, #c99500)" : "#cbd5e1"}`,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      cursor: "pointer",
-                      flexShrink: 0,
-                    }}
-                  >
-                    {reason === r && (
-                      <div style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--aa-primary, #c99500)" }} />
-                    )}
-                  </div>
-                  {r}
-                </label>
-              ))}
-            </div>
-          </div>
           {/* Submit Button */}
           <div>
             <button
@@ -160,7 +145,7 @@ export default function BookAppointment() {
               style={{
                 background: "linear-gradient(90deg, var(--aa-primary, #c99500) 0%, var(--aa-primary-dark, #c99500) 100%)",
                 border: "none",
-                borderRadius: 50,
+                borderRadius: 10,
                 padding: "14px 32px",
                 fontSize: "0.97rem",
                 cursor: "pointer",
@@ -209,7 +194,7 @@ export default function BookAppointment() {
             }}
           >
             <img
-              src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80"
+              src="/female-doctor.avif"
               alt="Doctor"
               style={{
                 width: "100%",

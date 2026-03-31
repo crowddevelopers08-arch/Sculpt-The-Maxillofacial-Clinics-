@@ -2,13 +2,26 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-const surgeryAllImages = ["/Before-After-Creatives-02.jpeg", "/Before-After-Creatives.jpeg", "/BeforeAfterCreatives.jpeg"];
+const surgeryAllImages = [
+  "/Before-After-Creatives-02.jpeg",
+  "/Before-After-Creatives.jpeg",
+  "/BeforeAfterCreatives.jpeg",
+];
 
 // ── Eyebrow pill ──────────────────────────────────────────────────────────────
 function SurgerySectionEyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <span className="inline-flex items-center gap-2 rounded-full border bg-white px-4 py-1.5 text-sm font-medium shadow-sm" style={{ borderColor: "var(--aa-border, #e5d8b5)", color: "var(--aa-primary, #c99500)" }}>
-      <span className="h-2 w-2 rounded-full inline-block" style={{ background: "var(--aa-primary, #c99500)" }} />
+    <span
+      className="inline-flex items-center gap-2 rounded-full border bg-white px-4 py-1.5 text-sm font-medium shadow-sm"
+      style={{
+        borderColor: "var(--aa-border, #e5d8b5)",
+        color: "var(--aa-primary, #c99500)",
+      }}
+    >
+      <span
+        className="h-2 w-2 rounded-full inline-block"
+        style={{ background: "var(--aa-primary, #c99500)" }}
+      />
       {children}
     </span>
   );
@@ -67,9 +80,7 @@ function SurgeryCyclingFrame({
           <span
             key={i}
             className={`block rounded-full transition-all duration-300 ${
-              i === current
-                ? "w-4 h-2 bg-white"
-                : "w-2 h-2 bg-white/50"
+              i === current ? "w-4 h-2 bg-white" : "w-2 h-2 bg-white/50"
             }`}
           />
         ))}
@@ -86,41 +97,68 @@ export function SurgeryResultsSection() {
       className="w-full bg-white py-16 px-4 sm:px-8 lg:px-20"
     >
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
         {/* LEFT — Content */}
         <div className="flex flex-col gap-6">
           <SurgerySectionEyebrow>The Evidence</SurgerySectionEyebrow>
 
-          <h2 className="text-4xl md:text-5xl font-black leading-tight" style={{ color: "var(--aa-heading, #1F1F1F)" }}>
-            Real Results. Refreshed{" "}
-            <br />
+          <h2
+            className="text-4xl md:text-5xl font-black leading-tight"
+            style={{ color: "var(--aa-heading, #1F1F1F)" }}
+          >
+            Real Results. Refreshed <br />
             <span
-              className="bg-clip-text text-transparent italic"
+              className="bg-clip-text text-transparent"
               style={{
                 backgroundImage:
                   "linear-gradient(90deg, var(--aa-primary, #c99500), var(--aa-accent, #c99500))",
               }}
             >
-              
- Appearance. Natural Expressions.
-
+              Appearance. Natural Expressions.
             </span>
           </h2>
 
-          <p className="text-base leading-relaxed" style={{ color: "var(--aa-body, #333333)" }}>
-           See how personalised anti-ageing treatments at Sculpt can help soften visible lines, restore facial freshness, and create a naturally refreshed appearance.
+          <p
+            className="text-base leading-relaxed"
+            style={{ color: "var(--aa-body, #333333)" }}
+          >
+            See how personalised anti-ageing treatments at Sculpt can help
+            soften visible lines, restore facial freshness, and create a
+            naturally refreshed appearance.
           </p>
 
           {/* Stats */}
           <div className="flex items-center gap-8 mt-2">
             <div className="flex flex-col gap-1">
-              <strong className="text-3xl font-black" style={{ color: "var(--aa-heading, #1F1F1F)" }}>2,500+</strong>
-              <span className="text-sm" style={{ color: "var(--aa-body, #333333)" }}>Procedures Completed</span>
+              <strong
+                className="text-3xl font-black"
+                style={{ color: "var(--aa-heading, #1F1F1F)" }}
+              >
+                2,500+
+              </strong>
+              <span
+                className="text-sm"
+                style={{ color: "var(--aa-body, #333333)" }}
+              >
+                Procedures Completed
+              </span>
             </div>
-            <div className="w-px h-12" style={{ background: "var(--aa-border, #e5d8b5)" }} />
+            <div
+              className="w-px h-12"
+              style={{ background: "var(--aa-border, #e5d8b5)" }}
+            />
             <div className="flex flex-col gap-1">
-              <strong className="text-3xl font-black" style={{ color: "var(--aa-heading, #1F1F1F)" }}>15+</strong>
-              <span className="text-sm" style={{ color: "var(--aa-body, #333333)" }}>Years of Experience</span>
+              <strong
+                className="text-3xl font-black"
+                style={{ color: "var(--aa-heading, #1F1F1F)" }}
+              >
+                15+
+              </strong>
+              <span
+                className="text-sm"
+                style={{ color: "var(--aa-body, #333333)" }}
+              >
+                Years of Experience
+              </span>
             </div>
           </div>
         </div>
@@ -128,15 +166,13 @@ export function SurgeryResultsSection() {
         {/* RIGHT — Cycling gallery */}
         <div className="relative w-full">
           {/* Soft aura glow behind the frame */}
-          <div className="absolute inset-0 -z-10 rounded-3xl blur-3xl opacity-60 scale-90" style={{ background: "var(--aa-border, #e5d8b5)" }} />
+          <div
+            className="absolute inset-0 -z-10 rounded-3xl blur-3xl opacity-60 scale-90"
+            style={{ background: "var(--aa-border, #e5d8b5)" }}
+          />
           <SurgeryCyclingFrame images={surgeryAllImages} delay={0} />
         </div>
-
       </div>
     </section>
   );
 }
-
-
-
-

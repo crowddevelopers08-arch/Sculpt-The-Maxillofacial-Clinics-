@@ -120,34 +120,28 @@ export default function FAQ() {
                 }}
               >
                 <div className="flex items-center justify-between gap-4 px-6 py-5">
-                  <div className="flex items-center gap-4">
-                    <span
-                      className="flex-shrink-0 flex items-center justify-center rounded-xl text-sm font-bold"
-                      style={{
-                        width: 36, height: 36,
-                        background: isOpen ? "linear-gradient(135deg, var(--aa-primary, #c99500), var(--aa-accent, #c99500))" : "rgba(201,149,0,0.09)",
-                        color: isOpen ? "#fff" : "var(--aa-primary, #c99500)",
-                        transition: "all 0.3s ease",
-                      }}
-                    >
-                      {faq.id}
-                    </span>
+                  <div className="flex items-center">
                     <p className="text-sm font-semibold leading-snug" style={{ color: isOpen ? "var(--aa-heading, #1F1F1F)" : "var(--aa-heading-soft, #3A3A3A)" }}>
                       {faq.question}
                     </p>
                   </div>
                   <span
                     className="flex-shrink-0 flex items-center justify-center rounded-full"
-                    style={{ width: 28, height: 28, background: isOpen ? "var(--aa-primary, #c99500)" : "rgba(201,149,0,0.09)", transition: "all 0.3s ease" }}
+                    style={{
+                      width: 32,
+                      height: 32,
+                      background: isOpen ? "var(--aa-primary, #c99500)" : "rgba(201,149,0,0.09)",
+                      transition: "all 0.3s ease",
+                    }}
                   >
-                    <svg viewBox="0 0 24 24" fill="none" width="14" height="14"
-                      style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.3s ease" }}>
-                      <path d="M6 9l6 6 6-6" stroke={isOpen ? "#fff" : "var(--aa-primary, #c99500)"} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <svg viewBox="0 0 24 24" fill="none" width="14" height="14">
+                      <path d="M12 7v10" stroke={isOpen ? "#fff" : "var(--aa-primary, #c99500)"} strokeWidth="2.2" strokeLinecap="round" style={{ opacity: isOpen ? 0 : 1, transition: "opacity 0.2s ease" }} />
+                      <path d="M7 12h10" stroke={isOpen ? "#fff" : "var(--aa-primary, #c99500)"} strokeWidth="2.2" strokeLinecap="round" />
                     </svg>
                   </span>
                 </div>
                 <div style={{ maxHeight: isOpen ? 200 : 0, overflow: "hidden", transition: "max-height 0.35s ease" }}>
-                  <div className="px-6 pb-5" style={{ paddingLeft: "calc(1.5rem + 36px + 1rem)" }}>
+                  <div className="px-6 pb-5">
                     <div className="w-10 mb-3" style={{ height: 2, background: "linear-gradient(90deg, var(--aa-primary, #c99500), var(--aa-accent-soft, #c99500))" }} />
                     <p className="text-sm leading-relaxed" style={{ color: "var(--aa-body, #333333)" }}>{faq.answer}</p>
                   </div>
@@ -197,24 +191,10 @@ export default function FAQ() {
                       border: isOpen ? "1.5px solid var(--aa-border, #e5d8b5)" : "1.5px solid transparent",
                       transition: "all 0.3s ease",
                     }}
-                  >
-                    {/* Question row */}
+                    >
+                      {/* Question row */}
                     <div className="flex items-center justify-between gap-4 px-6 py-5">
-                      <div className="flex items-center gap-4">
-                        <span
-                          className="flex-shrink-0 flex items-center justify-center rounded-xl text-sm font-bold"
-                          style={{
-                            width: 36,
-                            height: 36,
-                            background: isOpen
-                              ? "linear-gradient(135deg, var(--aa-primary, #c99500), var(--aa-accent, #c99500))"
-                              : "rgba(201,149,0,0.09)",
-                            color: isOpen ? "#fff" : "var(--aa-primary, #c99500)",
-                            transition: "all 0.3s ease",
-                          }}
-                        >
-                          {faq.id}
-                        </span>
+                      <div className="flex items-center">
                         <p
                           className="text-sm font-semibold leading-snug"
                           style={{ color: isOpen ? "var(--aa-heading, #1F1F1F)" : "var(--aa-heading-soft, #3A3A3A)" }}
@@ -225,8 +205,8 @@ export default function FAQ() {
                       <span
                         className="flex-shrink-0 flex items-center justify-center rounded-full"
                         style={{
-                          width: 28,
-                          height: 28,
+                          width: 32,
+                          height: 32,
                           background: isOpen ? "var(--aa-primary, #c99500)" : "rgba(201,149,0,0.09)",
                           transition: "all 0.3s ease",
                         }}
@@ -241,13 +221,8 @@ export default function FAQ() {
                             transition: "transform 0.3s ease",
                           }}
                         >
-                          <path
-                            d="M6 9l6 6 6-6"
-                            stroke={isOpen ? "#fff" : "var(--aa-primary, #c99500)"}
-                            strokeWidth="2.2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
+                          <path d="M12 7v10" stroke={isOpen ? "#fff" : "var(--aa-primary, #c99500)"} strokeWidth="2.2" strokeLinecap="round" style={{ opacity: isOpen ? 0 : 1, transition: "opacity 0.2s ease" }} />
+                          <path d="M7 12h10" stroke={isOpen ? "#fff" : "var(--aa-primary, #c99500)"} strokeWidth="2.2" strokeLinecap="round" />
                         </svg>
                       </span>
                     </div>
@@ -264,10 +239,7 @@ export default function FAQ() {
                         className="px-6 pb-5"
                         style={{ paddingLeft: "calc(1.5rem + 36px + 1rem)" }}
                       >
-                        <div
-                          className="w-10 mb-3"
-                          style={{ height: 2, background: "linear-gradient(90deg, var(--aa-primary, #c99500), var(--aa-accent-soft, #c99500))" }}
-                        />
+                        <div className="w-10 mb-3" style={{ height: 2, background: "linear-gradient(90deg, var(--aa-primary, #c99500), var(--aa-accent-soft, #c99500))" }} />
                         <p className="text-sm leading-relaxed" style={{ color: "var(--aa-body, #333333)" }}>
                           {faq.answer}
                         </p>
@@ -320,8 +292,8 @@ export default function FAQ() {
           <button
             className="relative z-10 w-full md:w-auto flex-shrink-0 font-bold rounded-xl px-5 py-3 sm:px-8 sm:py-4 text-sm sm:text-base text-center"
             style={{
-              background: "linear-gradient(90deg, var(--aa-primary, #c99500) 0%, var(--aa-primary-dark, #c99500) 100%)",
-              color: "#fff",
+              background: "linear-gradient(90deg, var(--aa-surface-soft, #c99500) 0%, var(--aa-surface-soft, #c99500) 100%)",
+              color: "#000",
               boxShadow: "0 6px 24px rgba(0,0,0,0.18)",
               letterSpacing: "0.02em",
               border: "none",

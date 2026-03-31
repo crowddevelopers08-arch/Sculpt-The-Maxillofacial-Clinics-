@@ -34,8 +34,8 @@ export default function HeroBanner() {
               className="font-black italic"
               style={{
                 fontSize: "clamp(3rem,5vw,5rem)",
-                WebkitTextStroke: "2px var(--aa-primary, #c99500)",
-                color: "transparent",
+                color: "var(--aa-accent-soft, #c99500)",
+                lineHeight: 1,
               }}
             >
               Age Gracefully.
@@ -245,7 +245,6 @@ export default function HeroBanner() {
     </section>
   );
 }
-
 
 
 

@@ -16,8 +16,8 @@ export default function Home() {
     <main>
       <Navbar />
       <HeroBanner />
-      <OurValues />
       <SurgeryResultsSection />
+      <OurValues />
       <TreatmentsWeOffer />
       <MedicalAboutSection />
       <Departments />

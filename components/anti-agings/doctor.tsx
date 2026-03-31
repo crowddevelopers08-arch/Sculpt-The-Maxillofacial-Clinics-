@@ -18,7 +18,7 @@ const ToothIcon = () => (
 
 export default function MedicalAboutSection() {
   return (
-    <section id="about-doctor" className="w-full bg-white py-10 px-4 sm:py-14 sm:px-8 lg:py-16 lg:px-20">
+    <section id="about-doctor" className="w-full bg-white py-10 px-4 max-sm:pb-2 sm:py-14 sm:px-8 lg:py-16 lg:px-20">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
 
         {/* LEFT SECTION - Image Layout */}
@@ -98,7 +98,7 @@ export default function MedicalAboutSection() {
         </div>
 
         {/* RIGHT SECTION */}
-        <div className="w-full lg:w-1/2 flex flex-col gap-6">
+        <div className="w-full lg:w-1/2 flex flex-col max-sm:gap-2 gap-6">
 
           {/* Tag */}
           <div
@@ -115,7 +115,14 @@ export default function MedicalAboutSection() {
           </h2>
 
           {/* Subtext */}
-          <p className="text-base leading-relaxed" style={{ color: "var(--aa-body, #333333)" }}>
+          <p
+            className="inline-flex w-fit items-center rounded-full text-lg font-semibold md:text-2xl"
+            style={{
+              color: "var(--aa-primary-dark, #8b6c0d)",
+              // backgroundColor: "var(--aa-surface-soft, #f8f7f2)",
+              // border: "1px solid var(--aa-border, #e5d8b5)",
+            }}
+          >
             Gold Medalist | Award-Winning Maxillofacial Surgeon | Internationally Published
           </p>
           <p className="text-base leading-relaxed" style={{ color: "var(--aa-body, #333333)" }}>

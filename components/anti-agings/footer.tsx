@@ -202,7 +202,7 @@ export default function Footer() {
             {["Privacy Policy"].map((item) => (
               <a
                 key={item}
-                href="/privacy-policy"
+                href="/privacy-policy-aging"
                 className="text-md"
                 style={{ color: "#6b7280", textDecoration: "none" }}
               >

@@ -83,9 +83,10 @@ export default function WelcomePatients() {
             <button
               className="flex items-center justify-center gap-2 font-bold text-white"
               style={{
-                background: "linear-gradient(90deg, var(--aa-primary, #c99500) 0%, var(--aa-primary-dark, #c99500) 100%)",
+                background: "linear-gradient(90deg, var(--aa-surface-soft, #c99500) 0%, var(--aa-surface-soft, #c99500) 100%)",
                 border: "none",
-                borderRadius: 50,
+                color: "#000",
+                borderRadius: 10,
                 padding: "11px 18px",
                 fontSize: "0.9rem",
                 cursor: "pointer",
@@ -124,7 +125,7 @@ export default function WelcomePatients() {
         >
           {/* Image fills the entire clipped container */}
           <img
-            src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=800&q=80"
+            src="/Dr-Priyanka-Raj.jpg"
             alt="Medical team"
             style={{
               width: "100%",
