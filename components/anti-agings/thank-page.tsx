@@ -1,8 +1,14 @@
 'use client'
 
-import React from "react";
+import React, { useEffect } from "react";
+
+declare function gtag(...args: unknown[]): void;
 
 export default function ThankYou() {
+  useEffect(() => {
+    gtag('event', 'conversion', { send_to: 'AW-11327193954/8nIoCN_f9ZIcEOKGnZkq' });
+  }, []);
+
   return (
     <div
       style={{
