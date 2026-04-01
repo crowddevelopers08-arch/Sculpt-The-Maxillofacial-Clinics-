@@ -24,7 +24,7 @@ export default function HeroBanner() {
               className="text-xs font-bold tracking-[0.18em] uppercase"
               style={{ color: "var(--aa-primary, #c99500)" }}
             >
-              Maxillofacial-Surgeon · Bangalore
+             Cranio Maxillofacial-Surgeon · Bangalore
             </span>
           </div>
 
@@ -61,19 +61,19 @@ export default function HeroBanner() {
             <span className="font-semibold" style={{ color: "var(--aa-heading, #1F1F1F)" }}>
               your skin, your face, your natural beauty
             </span>{" "}
-            — supervised every step by a certified Maxillofacial.
+            — supervised every step by a certified Cranio Maxillofacial-Surgeon.
           </p>
 
           {/* Stats row */}
           <div
             className="flex items-center gap-0 rounded-2xl overflow-hidden border"
-            style={{ borderColor: "var(--aa-border, #e5d8b5)", maxWidth: "460px" }}
+            style={{ borderColor: "var(--aa-border, #e5d8b5)", maxWidth: "586px" }}
           >
             {[
               { val: "4.9★", label: "Google" },
               { val: "13+", label: "Yrs Exp" },
               { val: "1000+", label: "Patients" },
-              { val: "100%", label: "Maxillofacial-Surgeon" },
+              { val: "100%", label: "Cranio Maxillofacial-Surgeon" },
             ].map((s, i) => (
               <div
                 key={s.label}
@@ -109,26 +109,6 @@ export default function HeroBanner() {
                 </svg>
               </span>
             </button>
-            <p className="text-xs" style={{ color: "var(--aa-muted, #6b7280)" }}>
-              Free consultation · No commitment
-            </p>
-          </div>
-
-          {/* Treatment tags */}
-          <div className="flex flex-wrap gap-2 pt-1">
-            {["Botox", "Dermal Fillers", "PRP", "Laser", "Skin Boosters"].map((t) => (
-              <span
-                key={t}
-                className="px-3 py-1 rounded-full text-xs font-medium"
-                style={{
-                  backgroundColor: "var(--aa-surface-soft, #f8f7f2)",
-                  color: "var(--aa-primary, #c99500)",
-                  border: "1px solid #e8dcba",
-                }}
-              >
-                {t}
-              </span>
-            ))}
           </div>
         </div>
 
@@ -195,7 +175,7 @@ export default function HeroBanner() {
                 className="w-1.5 h-1.5 rounded-full animate-pulse"
                 style={{ backgroundColor: "var(--aa-primary, #c99500)" }}
               />
-              Maxillofacial Surgeon
+              Cranio Maxillofacial-Surgeon
             </div>
 
             {/* Floating: bottom card */}

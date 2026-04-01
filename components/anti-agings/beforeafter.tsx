@@ -133,7 +133,7 @@ export function SurgeryResultsSection() {
                 className="text-3xl font-black"
                 style={{ color: "var(--aa-heading, #1F1F1F)" }}
               >
-                2,500+
+                1000+
               </strong>
               <span
                 className="text-sm"
