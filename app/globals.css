@@ -1275,7 +1275,7 @@ body {
 /* ── Surgery Procedures ── */
 .atelier-page .procedures-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 1.25rem;
 }
 
@@ -1285,9 +1285,32 @@ body {
   justify-content: space-between;
   padding: 2.25rem;
   border-radius: 2rem;
-  min-height: 22rem;
+  min-height: 28rem;
+  grid-column: span 2;
   transition: transform .5s cubic-bezier(.16,1,.3,1), box-shadow .5s, border-color .5s;
 }
+
+/* 3-2 centered layout: 4th card starts at col 2, 5th at col 4 */
+.atelier-page .procedure-card:nth-child(4) { grid-column: 2 / 4; }
+.atelier-page .procedure-card:nth-child(5) { grid-column: 4 / 6; }
+
+/* Procedure card image */
+.atelier-page .procedure-card-image {
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+}
+
+.atelier-page .card-procedure-img {
+  object-fit: cover;
+  transition: transform .5s cubic-bezier(.16,1,.3,1);
+}
+
+.atelier-page .procedure-card:hover .card-procedure-img { transform: scale(1.06); }
 
 .atelier-page .procedure-card:hover {
   transform: translateY(-8px) scale(1.02);
@@ -2479,7 +2502,14 @@ body {
 
 /* ── Surgery Responsive ── */
 @media (max-width: 1280px) {
-  .atelier-page .procedures-grid,
+  .atelier-page .procedures-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .atelier-page .procedure-card,
+  .atelier-page .procedure-card:nth-child(4),
+  .atelier-page .procedure-card:nth-child(5) {
+    grid-column: span 1;
+  }
   .atelier-page .steps-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2515,7 +2545,10 @@ body {
   .atelier-page .center-heading { margin-bottom: 1.25rem; }
   .atelier-page .section-header { flex-direction: column; align-items: flex-start; gap: 1.25rem; margin-bottom: 2.5rem; }
   .atelier-page .section-header .btn-outline { align-self: stretch; justify-content: center; }
-  .atelier-page .procedures-grid,
+  .atelier-page .procedures-grid { grid-template-columns: repeat(2, 1fr); }
+  .atelier-page .procedure-card,
+  .atelier-page .procedure-card:nth-child(4),
+  .atelier-page .procedure-card:nth-child(5) { grid-column: span 1; }
   .atelier-page .steps-grid { grid-template-columns: repeat(2, 1fr); }
   .atelier-page .trust-grid { grid-template-columns: repeat(2, 1fr); }
   .atelier-page .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; padding: 3.5rem 0 2rem; }
@@ -2541,7 +2574,10 @@ body {
   .atelier-page .two-column,
   .atelier-page .results-grid { grid-template-columns: 1fr; gap: 2rem; }
   .atelier-page .stats-gallery { grid-template-columns: 1fr 1fr; gap: .875rem; }
-  .atelier-page .procedures-grid,
+  .atelier-page .procedures-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .atelier-page .procedure-card,
+  .atelier-page .procedure-card:nth-child(4),
+  .atelier-page .procedure-card:nth-child(5) { grid-column: span 1; }
   .atelier-page .steps-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
   .atelier-page .trust-grid { grid-template-columns: 1fr; row-gap: 1.75rem; }
   .atelier-page .results-stats { grid-template-columns: 1fr 1fr; gap: .875rem; }
@@ -2582,7 +2618,10 @@ body {
   .atelier-page h2 { font-size: clamp(1.65rem, 9vw, 2.2rem); }
   .atelier-page h3 { font-size: clamp(1.1rem, 6vw, 1.4rem); }
   .atelier-page .hero { padding: 5.5rem 0 3rem; }
-  .atelier-page .procedures-grid,
+  .atelier-page .procedures-grid { grid-template-columns: 1fr; }
+  .atelier-page .procedure-card,
+  .atelier-page .procedure-card:nth-child(4),
+  .atelier-page .procedure-card:nth-child(5) { grid-column: span 1; }
   .atelier-page .steps-grid { grid-template-columns: 1fr; }
   .atelier-page .procedure-card,
   .atelier-page .step-card,

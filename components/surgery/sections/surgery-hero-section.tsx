@@ -18,17 +18,14 @@ export function SurgeryHeroSection() {
       />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center max-sm:gap-5 gap-10 max-sm:pt-20 lg:py-14">
+
         {/* ── Left: content ── */}
         <div className="w-full lg:w-[65%] flex flex-col items-start justify-center">
+
           {/* Eyebrow */}
           <div className="flex items-center lg:pt-10 gap-3 mb-6">
-            <span
-              className="block w-8 h-px"
-              style={{ background: "#c99500" }}
-            />
-            <SurgerySectionEyebrow>
-              Surgical Excellence Redefined
-            </SurgerySectionEyebrow>
+            <span className="block w-8 h-px" style={{ background: "#c99500" }} />
+            <SurgerySectionEyebrow>Surgical Excellence Redefined</SurgerySectionEyebrow>
           </div>
 
           {/* Headline */}
@@ -43,7 +40,7 @@ export function SurgeryHeroSection() {
           {/* Body copy */}
           <p
             className="text-base lg:text-lg mb-8 max-w-lg"
-            style={{ color: "#9a8a6a", lineHeight: 1.75, marginBottom: "10px" }}
+            style={{ color: "#9a8a6a", lineHeight: 1.75, marginBottom:"10px" }}
           >
             Advanced maxillofacial procedures for jawline definition, nose
             reshaping, eye rejuvenation, and facial balance are planned with
@@ -53,9 +50,9 @@ export function SurgeryHeroSection() {
           {/* Trust badges */}
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 mb-10">
             {[
-              { icon: "verified", label: "MDS Maxillofacial Surgeon-Led" },
+              { icon: "verified",      label: "MDS Maxillofacial Surgeon-Led" },
               { icon: "military_tech", label: "Advanced Surgical Expertise" },
-              { icon: "favorite", label: "Proven Patient Results" },
+              { icon: "favorite",      label: "Proven Patient Results" },
             ].map((item) => (
               <div
                 key={item.label}
@@ -65,7 +62,6 @@ export function SurgeryHeroSection() {
                   border: "1px solid rgba(201,149,0,0.2)",
                   color: "#c8b882",
                   fontSize: "0.82rem",
-                  // fontFamily: "Georgia, serif",
                 }}
               >
                 <SurgeryMaterialIcon name={item.icon} />
@@ -82,15 +78,9 @@ export function SurgeryHeroSection() {
                 className="w-px h-10 hidden sm:block"
                 style={{ background: "rgba(201,149,0,0.25)" }}
               />
-              <div
-                className="flex flex-col"
-              >
-                <strong className="text-white text-base font-bold">
-                  15+ Years
-                </strong>
-                <span className="text-xs" style={{ color: "#9a8a6a" }}>
-                  Clinical Excellence
-                </span>
+              <div className="flex flex-col">
+                <strong className="text-white text-base font-bold">15+ Years</strong>
+                <span className="text-xs" style={{ color: "#9a8a6a" }}>Clinical Excellence</span>
               </div>
             </div>
           </div>
@@ -134,8 +124,7 @@ export function SurgeryHeroSection() {
               className="absolute bottom-0 left-0 right-0 pointer-events-none"
               style={{
                 height: "40%",
-                background:
-                  "linear-gradient(to top, rgba(7,7,15,0.92) 0%, transparent 100%)",
+                background: "linear-gradient(to top, rgba(7,7,15,0.92) 0%, transparent 100%)",
               }}
             />
 
@@ -144,31 +133,20 @@ export function SurgeryHeroSection() {
               className="absolute top-0 left-0 right-0 pointer-events-none"
               style={{
                 height: 2,
-                background:
-                  "linear-gradient(90deg, transparent, #c99500 35%, #c99500 65%, transparent)",
+                background: "linear-gradient(90deg, transparent, #c99500 35%, #c99500 65%, transparent)",
               }}
             />
 
-            {/* Corner marks */}
+            {/* Corner marks — top left */}
             <div className="absolute top-0 left-0 pointer-events-none">
               <div style={{ width: 28, height: 2, background: "#c99500" }} />
               <div style={{ width: 2, height: 28, background: "#c99500" }} />
             </div>
+
+            {/* Corner marks — bottom right */}
             <div className="absolute bottom-0 right-0 pointer-events-none flex flex-col items-end">
-              <div
-                style={{
-                  width: 2,
-                  height: 28,
-                  background: "rgba(201,149,0,0.4)",
-                }}
-              />
-              <div
-                style={{
-                  width: 28,
-                  height: 2,
-                  background: "rgba(201,149,0,0.4)",
-                }}
-              />
+              <div style={{ width: 2, height: 28, background: "rgba(201,149,0,0.4)" }} />
+              <div style={{ width: 28, height: 2, background: "rgba(201,149,0,0.4)" }} />
             </div>
 
             {/* Bottom label */}
@@ -176,20 +154,9 @@ export function SurgeryHeroSection() {
               <div>
                 <p
                   className="text-xs uppercase tracking-widest mb-0.5 font-semibold"
-                  style={{
-                     color: "#c99500",
-
-                    letterSpacing: "0.14em",
-                  }}
+                  style={{ color: "#c99500", letterSpacing: "0.14em" }}
                 >
-                  <SurgerySectionEyebrow>
-                  Surgical Excellence Redefined
-                  </SurgerySectionEyebrow>
-                </p>
-                <p
-                  className="text-sm font-bold"
-                  style={{ color: "#e8d9b0", fontFamily: "Georgia, serif" }}
-                ></p>
+                  <SurgerySectionEyebrow>Surgical Excellence Redefined</SurgerySectionEyebrow></p>
               </div>
               <div
                 className="flex items-center justify-center rounded"
@@ -205,6 +172,7 @@ export function SurgeryHeroSection() {
             </div>
           </div>
         </div>
+
       </div>
     </header>
   );
