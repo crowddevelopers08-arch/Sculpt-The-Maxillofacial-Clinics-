@@ -66,7 +66,7 @@ export function SurgeryResultsSection() {
               <span>Procedures Completed</span>
             </div>
             <div className="mini-metric">
-              <strong>15+</strong>
+              <strong>13+</strong>
               <span>Years of Experience</span>
             </div>
           </div>

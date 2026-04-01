@@ -1,27 +1,33 @@
 export const surgeryProcedures = [
   {
-    icon: "face_6",
+    image: "/jaw.png",
     title: "Jawline Definition and Contouring",
     description:
       "Enhance jaw structure, improve facial symmetry, and achieve a sharper, more defined lower face."
   },
   {
-    icon: "architecture",
+    image: "/chin.png",
     title: "Chin Projection and Balance",
     description:
       "Correct a recessed or underdefined chin to improve profile harmony and strengthen overall facial proportions."
   },
   {
-    icon: "self_care",
+    image: "/nose.jpeg",
     title: "Nose Shape and Correction",
     description:
       "Refine the size, shape, or symmetry of the nose while maintaining natural facial balance."
   },
   {
-    icon: "visibility",
+    image: "/Bef.jpg.jpeg",
     title: "Eye Rejuvenation (Blepharoplasty)",
     description:
       "Address droopy eyelids, under-eye bags, and excess skin to restore a more refreshed appearance."
+  },
+  {
+    image: "/facelipt.webp",
+    title: "Facelift (Rhytidectomy)",
+    description:
+      "Restore a youthful facial contour by addressing sagging skin, deep wrinkles, and loss of definition in the face and neck."
   }
 ] as const;
 

@@ -27,8 +27,8 @@ export function SurgeryExpertiseSection() {
             <div>
               <SurgerySectionEyebrow>Medical Authority</SurgerySectionEyebrow>
               <h2>
-                Led by a Maxillofacial <br />
-                <span className="accent">Surgical Specialist</span>
+                Led by a Cranio Maxillofacial Surgeon <br />
+                <span className="accent">Facial Plastic Surgeon</span>
               </h2>
               <p className="section-copy">
                 Unlike general cosmetic approaches, maxillofacial expertise

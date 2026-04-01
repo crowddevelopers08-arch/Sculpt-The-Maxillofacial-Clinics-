@@ -1,5 +1,7 @@
+import Image from "next/image";
 import { surgeryProcedures } from "../surgery-data";
 import { SurgeryMaterialIcon, SurgeryOutlineButton, SurgerySectionEyebrow } from "../surgery-shared";
+
 
 export function SurgeryProceduresSection() {
   return (
@@ -25,10 +27,15 @@ export function SurgeryProceduresSection() {
               className={`glass-card procedure-card reveal delay-${index + 1}`}
               key={procedure.title}
             >
+              <div className="procedure-card-image">
+                <Image
+                  src={procedure.image}
+                  alt={procedure.title}
+                  fill
+                  className="card-procedure-img"
+                />
+              </div>
               <div className="card-top">
-                <div className="icon-box">
-                  <SurgeryMaterialIcon name={procedure.icon} />
-                </div>
                 <h3>{procedure.title}</h3>
                 <p>{procedure.description}</p>
               </div>
