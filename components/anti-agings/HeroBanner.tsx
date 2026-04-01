@@ -73,11 +73,11 @@ export default function HeroBanner() {
               { val: "4.9★", label: "Google" },
               { val: "13+", label: "Yrs Exp" },
               { val: "1000+", label: "Patients" },
-              { val: "100%", label: "Cranio Maxillofacial-Surgeon" },
+              { val: "100%", label: "Cranio Maxillofacial-Surgeon", hideOnMobile: true },
             ].map((s, i) => (
               <div
                 key={s.label}
-                className="flex-1 flex flex-col items-center py-3.5 px-2"
+                className={`flex-1 flex flex-col items-center py-3.5 px-2${(s as any).hideOnMobile ? " hidden sm:flex" : ""}`}
                 style={{
                   backgroundColor: i % 2 === 0 ? "white" : "var(--aa-surface-tint, #f4eee0)",
                   borderRight: i < 3 ? "1px solid var(--aa-border, #e5d8b5)" : "none",
@@ -163,7 +163,7 @@ export default function HeroBanner() {
 
             {/* Floating: top-center badge */}
             <div
-              className="absolute top-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold whitespace-nowrap"
+              className="absolute max-sm:top-8 top-4 left-1/2 -translate-x-1/2 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold whitespace-nowrap"
               style={{
                 backgroundColor: "rgba(255,255,255,0.90)",
                 backdropFilter: "blur(8px)",
@@ -208,7 +208,7 @@ export default function HeroBanner() {
 
           {/* Side stat card — overlapping left edge */}
           <div
-            className="absolute left-0 top-1/2 -translate-y-1/2 flex flex-col items-center gap-1 px-4 py-4 rounded-2xl"
+            className="absolute max-sm:left-[-25px] left-0 top-1/2 -translate-y-1/2 flex flex-col items-center gap-1 px-4 py-4 rounded-2xl"
             style={{
               backgroundColor: "white",
               boxShadow: "0 8px 32px rgba(139,108,13,0.12)",

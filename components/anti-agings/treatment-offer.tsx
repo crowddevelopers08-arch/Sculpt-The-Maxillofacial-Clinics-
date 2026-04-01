@@ -73,7 +73,7 @@ export default function TreatmentsWeOffer() {
         }}
       />
 
-      <div className="relative z-10 w-full max-w-7xl px-6 py-16 md:py-20 flex flex-col items-center">
+      <div className="relative z-10 w-full max-w-7xl px-4 sm:px-6 py-10 md:py-20 flex flex-col items-center">
 
         {/* Section label */}
         <p
@@ -85,18 +85,30 @@ export default function TreatmentsWeOffer() {
 
         {/* Headline */}
         <h2
-          className="text-4xl md:text-5xl font-bold text-white text-center mb-14"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center mb-8 md:mb-14"
           style={{ letterSpacing: "0.01em" }}
         >
           Aging Concerns that we treat
         </h2>
 
-
-        {/* ── Five cards — one row ── */}
-        <div className="w-full overflow-x-auto pb-3">
+        {/* ── Five cards — one scrollable row ── */}
+        <div
+          className="w-full pb-3"
+          style={{
+            overflowX: "auto",
+            WebkitOverflowScrolling: "touch",
+            /* hide scrollbar but keep scroll */
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
+          }}
+        >
+          <style>{`.cards-row::-webkit-scrollbar { display: none; }`}</style>
           <div
-            className="flex gap-4"
-            style={{ minWidth: 900 }}
+            className="cards-row flex gap-3 md:gap-4"
+            style={{
+              /* mobile: each card ~78vw so partial next card is visible */
+              width: "max-content",
+            }}
           >
             {treatments.map((t, idx) => {
               const isActive = activeTab === idx;
@@ -104,13 +116,14 @@ export default function TreatmentsWeOffer() {
                 <button
                   key={t.id}
                   onClick={() => setActiveTab(idx)}
-                  className="relative flex flex-col text-left focus:outline-none shrink-0"
+                  className="relative flex flex-col text-left focus:outline-none flex-shrink-0"
                   style={{
-                    flex: "1 1 0",
-                    minWidth: 0,
+                    /* mobile: 72vw | tablet: 200px | desktop fills equally */
+                    width: "clamp(230px, 72vw, 260px)",
+                    /* on md+ override via inline — tailwind can't do dynamic */
                     borderRadius: 4,
                     overflow: "hidden",
-                    height: 420,
+                    height: 400,
                     border: isActive
                       ? "1px solid rgba(201,149,0,0.55)"
                       : "1px solid rgba(255,255,255,0.06)",
@@ -123,7 +136,7 @@ export default function TreatmentsWeOffer() {
                   }}
                 >
                   {/* Card image — top half */}
-                  <div className="relative w-full" style={{ height: 200, flexShrink: 0 }}>
+                  <div className="relative w-full" style={{ height: 180, flexShrink: 0 }}>
                     <img
                       src={t.image}
                       alt={t.title}
@@ -135,16 +148,15 @@ export default function TreatmentsWeOffer() {
                         transition: "filter 0.4s ease",
                       }}
                     />
-                    {/* Bottom image fade into card body */}
+                    {/* Bottom fade */}
                     <div
                       className="absolute bottom-0 left-0 right-0"
                       style={{
-                        height: 80,
-                        background:
-                          "linear-gradient(to bottom, transparent, #0d0c0b)",
+                        height: 70,
+                        background: "linear-gradient(to bottom, transparent, #0d0c0b)",
                       }}
                     />
-                    {/* Scratched-overlay strip */}
+                    {/* Scratch overlay */}
                     <div
                       className="absolute inset-0"
                       style={{
@@ -167,13 +179,13 @@ export default function TreatmentsWeOffer() {
                   </div>
 
                   {/* Card body */}
-                  <div className="flex flex-col flex-1 px-5 pt-4 pb-6">
+                  <div className="flex flex-col flex-1 px-4 pt-4 pb-5">
                     {/* Icon */}
                     <div
-                      className="flex items-center justify-center mb-4"
+                      className="flex items-center justify-center mb-3"
                       style={{
-                        width: 44,
-                        height: 44,
+                        width: 40,
+                        height: 40,
                         borderRadius: 3,
                         background: isActive
                           ? "rgba(201,149,0,0.18)"
@@ -187,8 +199,8 @@ export default function TreatmentsWeOffer() {
                       <img
                         src={t.icon}
                         alt=""
-                        width={22}
-                        height={22}
+                        width={20}
+                        height={20}
                         style={{
                           filter: isActive
                             ? "brightness(0) saturate(100%) invert(73%) sepia(61%) saturate(600%) hue-rotate(5deg)"
@@ -202,7 +214,7 @@ export default function TreatmentsWeOffer() {
                     <h3
                       className="font-bold mb-2 leading-snug"
                       style={{
-                        fontSize: "0.93rem",
+                        fontSize: "0.88rem",
                         color: isActive ? "#e8d9b0" : "#c8b48a",
                         letterSpacing: "0.01em",
                         transition: "color 0.3s ease",
@@ -214,7 +226,7 @@ export default function TreatmentsWeOffer() {
                     {/* Description */}
                     <p
                       style={{
-                        fontSize: "0.78rem",
+                        fontSize: "0.75rem",
                         lineHeight: 1.65,
                         color: isActive ? "#8a7a58" : "#8a7a62",
                         transition: "color 0.3s ease",
@@ -241,8 +253,29 @@ export default function TreatmentsWeOffer() {
           </div>
         </div>
 
-        {/* ── Active treatment detail + CTA ── */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 w-full mt-10 pt-8"
+        {/* Scroll hint dots — mobile only */}
+        <div className="flex md:hidden items-center gap-1.5 mt-4">
+          {treatments.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setActiveTab(idx)}
+              style={{
+                width: activeTab === idx ? 18 : 6,
+                height: 6,
+                borderRadius: 99,
+                background: activeTab === idx ? "#c99500" : "rgba(255,255,255,0.15)",
+                border: "none",
+                padding: 0,
+                transition: "all 0.3s ease",
+                cursor: "pointer",
+              }}
+            />
+          ))}
+        </div>
+
+        {/* ── Active detail + CTA ── */}
+        <div
+          className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 w-full mt-8 pt-6"
           style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
         >
           <div>
@@ -254,14 +287,14 @@ export default function TreatmentsWeOffer() {
             </p>
             <p
               className="font-bold"
-              style={{ color: "#c8b882", fontSize: "1rem" }}
+              style={{ color: "#c8b882", fontSize: "0.97rem" }}
             >
               {current.title}
             </p>
           </div>
 
           <button
-            className="flex items-center gap-2 px-6 py-3 rounded text-sm font-semibold text-white hover:opacity-90 active:scale-95 shrink-0"
+            className="flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 rounded text-sm font-semibold text-white hover:opacity-90 active:scale-95 shrink-0"
             style={{
               background: "linear-gradient(90deg, #c99500 0%, #a87b00 100%)",
               boxShadow: "0 4px 18px rgba(201,149,0,0.3)",
@@ -282,7 +315,7 @@ export default function TreatmentsWeOffer() {
 
         {/* Bottom divider */}
         <div
-          className="mt-10 w-full"
+          className="mt-8 w-full"
           style={{
             height: "1px",
             background:
