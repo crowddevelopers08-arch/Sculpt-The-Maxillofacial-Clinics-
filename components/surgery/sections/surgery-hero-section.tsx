@@ -48,7 +48,7 @@ export function SurgeryHeroSection() {
           <div className="stat-block">
             <div className="stat-divider" />
             <div>
-              <strong>15+ Years</strong>
+              <strong>13+ Years</strong>
               <span>Clinical Excellence</span>
             </div>
           </div>
