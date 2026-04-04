@@ -44,7 +44,7 @@ export function SurgerySurgicalApproachSection() {
           <div className="gallery-col">
             <div className="glass-frame">
               <Image
-                src="/stwo01.jpg.jpeg"
+                src="/stwo-01.jpg.jpeg"
                 alt="Anatomical precision"
                 width={520}
                 height={740}
@@ -64,7 +64,7 @@ export function SurgerySurgicalApproachSection() {
             </div>
             <div className="glass-frame">
               <Image
-                src="/stwo02.jpg.jpeg"
+                src="/stwo-02.jpg.jpeg"
                 alt="Digital planning"
                 width={520}
                 height={740}
