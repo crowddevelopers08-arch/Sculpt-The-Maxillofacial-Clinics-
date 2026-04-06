@@ -79,7 +79,7 @@ export function SurgeryHeroSection() {
                 style={{ background: "rgba(201,149,0,0.25)" }}
               />
               <div className="flex flex-col">
-                <strong className="text-white text-base font-bold">15+ Years</strong>
+                <strong className="text-white text-base font-bold">13+ Years</strong>
                 <span className="text-xs" style={{ color: "#9a8a6a" }}>Clinical Excellence</span>
               </div>
             </div>
